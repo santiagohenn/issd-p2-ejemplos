@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Demo JWT con Cookies</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/scripts_auth.js"></script>
+</head>
+<body>
+  <h2>Login</h2>
+  <input id="usuario" placeholder="Usuario" />
+  <input id="clave" type="password" placeholder="Contraseña" />
+  <button onclick="login()">Login</button>
+
+  <h2>Acceso protegido</h2>
+  <button onclick="protegido()">Autorizado?</button>
+  <a href="/pagina_secreta" target="_blank" class="boton">Admin site</a>
+  <p id="resultado"></p>
+</body>
+</html>

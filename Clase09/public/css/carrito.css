@@ -1,0 +1,54 @@
+body {
+  font-family: sans-serif;
+  display: flex;
+  margin: 0;
+}
+
+.productos {
+  width: 75%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.carrito {
+  width: 25%;
+  background-color: #f4f4f4;
+  padding: 20px;
+  box-sizing: border-box;
+  border-left: 1px solid #ccc;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  width: 25%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+button {
+  padding: 6px 12px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+ul {
+  padding-left: 20px;
+}
