@@ -1,36 +1,72 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <title>Demo Cookies</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <title>Sumar Números</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #2a9d8f;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #resultado {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-  <h1>Demo: Cookies! 🍪</h1>
-  <p id="status">Sin cookies por ahora!</p>
 
-  <button onclick="crearCookie()">Crear Cookie</button>
-  <button onclick="borrarCookie()">Borrar Cookie</button>
-  <button onclick="toggleTheme()">Cambiar modo!</button>
-  <script src="js/scripts.js"></script>
+  <h2>Dividir dos números</h2>
+
+  <label for="numeroA">Número A:</label>
+  <input type="number" id="numeroA" />
+
+  <label for="numeroB">Número B:</label>
+  <input type="number" id="numeroB" />
+
+  <button onclick="dividir()">Dividir</button>
+
+  <div id="resultado"></div>
+
+  <script>
+    async function dividir() {
+      const a = parseFloat(document.getElementById('numeroA').value);
+      const b = parseFloat(document.getElementById('numeroB').value);
+
+      const response = await fetch('/api/dividir', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ a, b })
+      });
+
+      const data = await response.json();
+      document.getElementById('resultado').textContent = `Resultado: ${data.resultado}`;
+    }
+  </script>
 
 </body>
 </html>
-
-<!--
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Demo Clase 09</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <script src="js/scripts.js"></script>
-</head>
-<body>
-  <h1>Bienvenido!</h1>
-  <button onclick="hola()">Hola!</button>
-  <p id="areaDeMensaje"></p>
-</body>
-</html>
--->
