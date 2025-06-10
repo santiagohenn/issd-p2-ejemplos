@@ -1,0 +1,35 @@
+/* Add 8-bit font import (use 'Press Start 2P' from Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  font-family: 'Press Start 2P', cursive, monospace;
+  color: #fff;
+  background-color: #181818;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: auto;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #00d23b;
+  font-family: 'Press Start 2P', cursive, monospace;
+}
+
+p#status {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  font-family: 'Press Start 2P', cursive, monospace;
+}
+
+.dark-product {
+  background-color: #282828;
+  color: #dfdfdf;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
