@@ -2,6 +2,7 @@ const request = require('supertest');
 const app = require('../app');
 
 describe('Pruebas de la API', () => {
+
   test('GET /api/saludo responde con mensaje', async () => {
     const res = await request(app).get('/api/saludo');
 
@@ -17,4 +18,5 @@ describe('Pruebas de la API', () => {
     expect(res.statusCode).toBe(200);
     expect(res.body.resultado).toBe(7);
   });
+  
 });

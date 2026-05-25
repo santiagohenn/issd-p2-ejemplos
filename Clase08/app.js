@@ -3,7 +3,7 @@ const path = require('path');
 const authRoutes = require('./routes/authRoutes');
 const authenticate = require('./middlewares/authMiddleware');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3030;
 
 const app = express();
 
@@ -16,7 +16,7 @@ app.use('/auth', authRoutes);
 // Ruta protegida
 app.get('/protegido', authenticate, (req, res) => {
   // Voy a poner lo que sea que quiera verificar usuarios
-  res.json({ message: `Hola, ${req.user.email}` });
+  res.json({ message: `Hola, ${req.user.email} estas autorizado!` });
 });
 
 app.listen(PORT, () => {

@@ -8,7 +8,7 @@ const client = new MongoClient(uri, {
 });
 
 const app = express();
-const PORT = 3000;
+const PORT = 3005;
 
 app.use(express.static('public'));
 
@@ -41,7 +41,7 @@ app.get("/test-db", async (req, res) => {
   }
 });
 
-
+// Query params
 app.get("/object", async (req, res) => {
 
     let nombre = req.query.nombre;
@@ -81,7 +81,7 @@ async function getProducto(producto) {
   try {
 
     await client.connect();
-    const db = client.db("productos");
+    const db = client.db("test");
     const productos = db.collection("productos");
     resultado = await productos.findOne({nombre: producto});
     

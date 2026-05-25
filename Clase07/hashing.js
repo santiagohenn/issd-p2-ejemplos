@@ -12,7 +12,7 @@ function hashPassword(password, salt) {
 const salt = crypto.randomBytes(16).toString('hex');
 
 // Ejemplo de uso
-const password = "Mi_super_secret_contraseña";
+const password = "Mi_super_secret_contraseñA";
 const hashedPassword = hashPassword(password, salt);
 
 console.log(`Salt: ${salt}`);

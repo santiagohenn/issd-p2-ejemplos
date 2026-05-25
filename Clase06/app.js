@@ -4,7 +4,7 @@ const responseHandler = require("./middlewares/responseHandler");
 const errorHandler = require("./middlewares/errorHandler");
 const productosRoutes = require('./routes/productos');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3010;
 
 const app = express();
 
