@@ -18,5 +18,13 @@ describe('Pruebas de la API', () => {
     expect(res.statusCode).toBe(200);
     expect(res.body.resultado).toBe(7);
   });
+
+  test('Api que no existe', async () => {
+    const res = await request(app)
+      .post('/api/no_exsite')
+      .send({ a: 3, b: 4 });
+
+    expect(res.statusCode).toBe(404);
+  });
   
 });
