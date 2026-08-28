@@ -1,3 +1,3 @@
-console.log("Hola Mundo!");
-console.log("Como estas?");
-console.log("Todo bien?");
+var numero1 = 20;
+
+console.log(numero1 * 55);
