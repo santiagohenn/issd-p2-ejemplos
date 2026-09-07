@@ -1,10 +1,11 @@
 {
   "name": "clase03",
   "version": "1.0.0",
-  "description": "bla bla bla bal",
-  "main": "index.js",
+  "description": "Ejemplos sencillos de patrones y REST con Node.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "test": "node --check app.js && node --check promesa.js && node --check patrones/singleton.js && node --check patrones/factory.js && node --check patrones/adapter.js && node --check patrones/mediator.js && node --check patrones/modulo.js"
   },
   "keywords": [],
   "author": "",
